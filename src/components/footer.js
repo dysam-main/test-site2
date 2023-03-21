@@ -11,11 +11,7 @@ const Footer = (props) => {
       <div className="footer-content">
         <div className="footer-information">
           <div className="footer-heading">
-            <img
-              alt={props.pastedImage_alt}
-              src={props.pastedImage_src}
-              className="footer-pasted-image"
-            />
+            <h3 className="footer-pasted-image">dysamFin</h3>
             <span className="footer-text">{props.text1}</span>
           </div>
           <div className="footer-socials">
@@ -32,21 +28,10 @@ const Footer = (props) => {
         </div>
         <div className="footer-links">
           <div className="footer-column">
-            <span className="footer-header">{props.Header}</span>
-            <span className="footer-link">{props.Link}</span>
-            <span className="footer-link01">{props.Link1}</span>
-            <span className="footer-link02">{props.Link2}</span>
-            <span className="footer-link03">{props.Link3}</span>
-            <span className="footer-link04">{props.Link4}</span>
+
           </div>
           <div className="footer-column1">
-            <span className="footer-header1">{props.Header1}</span>
-            <span className="footer-link05">{props.Link5}</span>
-            <span className="footer-link06">{props.Link6}</span>
-            <span className="footer-link07">{props.Link7}</span>
-            <span className="footer-link08">{props.Link8}</span>
-            <span className="footer-link09">{props.Link9}</span>
-            <span className="footer-link10">{props.Link10}</span>
+
           </div>
         </div>
       </div>
@@ -69,7 +54,7 @@ Footer.defaultProps = {
   Link7: 'News',
   Link2: 'Design to Code',
   Link5: 'About',
-  text: '© 2022 finbest. All Rights Reserved.',
+  text: '© 2022 dysamSoft. Todos los derechos Reservados.',
   Header: 'Solutions',
   Link6: 'Team',
   Link4: 'Static Website Generator',

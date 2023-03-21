@@ -5,6 +5,7 @@ import DangerousHTML from 'dangerous-html/react'
 import PropTypes from 'prop-types'
 
 import './navbar.css'
+import { Scrollchor } from 'react-scrollchor'
 
 const Navbar = (props) => {
   return (
@@ -13,35 +14,35 @@ const Navbar = (props) => {
         <div className="navbar-main">
           <div className="navbar-branding">
             <Link to="/" className="navbar-navlink">
-              <img
-                alt={props.Branding_alt}
-                src={props.Branding_src}
-                className="navbar-finbest"
-              />
+              <h2 className="navbar-finbest"
+              >dysamApp</h2>
             </Link>
           </div>
           <div className="navbar-links">
-            <Link to="/" className="link">
-              {props.Link_1}
-            </Link>
-            <Link to="/" className="link">
-              {props.Link_2}
-            </Link>
-            <Link to="/" className="link">
-              {props.Link_3}
-            </Link>
-            <Link to="/" className="link">
-              {props.Link_4}
-            </Link>
+            <Scrollchor to="#Features" className="link">
+              Características
+            </Scrollchor>
+            <Scrollchor to="#Sections" className="link">
+              Cómo Trabaja
+            </Scrollchor>
+            <Scrollchor to="#Pricing" className="link">
+              Precios
+            </Scrollchor>
+            <Scrollchor to="#Download" className="link">
+              Descarga
+            </Scrollchor>
+            <Scrollchor to="#Faq" className="link">
+              Preguntas
+            </Scrollchor>
           </div>
         </div>
         <div className="navbar-quick-actions">
           <Link to="/" className="link navbar-log-in">
-            Log in
+            Ingresar
           </Link>
           <Link to="/" className="navbar-navlink1">
             <div className="navbar-sign-up-btn">
-              <span className="navbar-sign-up">Sign up</span>
+              <span className="navbar-sign-up">Registrarse</span>
             </div>
           </Link>
           <img
@@ -54,11 +55,7 @@ const Navbar = (props) => {
       </div>
       <div id="mobile-menu" className="navbar-mobile">
         <div className="navbar-top">
-          <img
-            alt={props.image_alt}
-            src={props.image_src}
-            className="navbar-image"
-          />
+          <h2 className="navbar-image"> dysamFin </h2>
           <svg
             id="close-mobile-menu"
             viewBox="0 0 1024 1024"
@@ -68,18 +65,21 @@ const Navbar = (props) => {
           </svg>
         </div>
         <div className="navbar-links1">
-          <Link to="/" className="navbar-navlink2">
-            {props.text1}
-          </Link>
-          <Link to="/" className="navbar-navlink3">
-            {props.text11}
-          </Link>
-          <Link to="/" className="navbar-navlink4">
-            {props.text12}
-          </Link>
-          <Link to="/" className="navbar-navlink5">
-            {props.text13}
-          </Link>
+        <Scrollchor to="#Features" className="navbar-navlink2">
+              Características
+            </Scrollchor>
+            <Scrollchor to="#Sections" className="navbar-navlink2">
+              Cómo Trabaja
+            </Scrollchor>
+            <Scrollchor to="#Pricing" className="navbar-navlink2">
+              Precios
+            </Scrollchor>
+            <Scrollchor to="#Download" className="navbar-navlink2">
+              Descarga
+            </Scrollchor>
+            <Scrollchor to="#Faq" className="navbar-navlink2">
+              Preguntas
+            </Scrollchor>
           <div className="navbar-buttons">
             <Link to="/" className="navbar-navlink6">
               <div className="navbar-btn">
@@ -127,18 +127,18 @@ const Navbar = (props) => {
 }
 
 Navbar.defaultProps = {
-  Link_3: 'Prices\n',
-  text1: 'Features',
-  text12: 'Prices',
-  Link_4: 'Contact\n',
+  Link_3: 'Planes\n',
+  text1: 'Qué tiene?',
+  text12: 'Planes',
+  Link_4: 'Descarga\n',
   Branding_src: '/playground_assets/pastedimage-cx4wqj.svg',
-  Link_1: 'Features',
-  text131: 'Log in',
+  Link_1: 'Qué tiene?',
+  text131: 'Ingresar',
   image_alt: 'image',
   pastedImage_src: '/playground_assets/pastedimage-8o98.svg',
   text1311: 'Sign up',
-  text13: 'Contact',
-  Link_2: 'How it works',
+  text13: 'Descarga',
+  Link_2: 'Cómo Trabaja',
   pastedImage_alt: 'pastedImage',
   image_src: '/playground_assets/pastedimage-cx4wqj.svg',
   Branding_alt: 'pastedImage',

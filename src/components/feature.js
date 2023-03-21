@@ -21,7 +21,7 @@ const Feature = (props) => {
 }
 
 Feature.defaultProps = {
-  Title: 'Account',
+  Title: 'Perfil',
   Thumbnail_alt: 'image',
   Thumbnail: '/playground_assets/vector.svg',
   rootClassName: '',

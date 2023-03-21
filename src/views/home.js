@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import DangerousHTML from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
 
-import Announcement from '../components/announcement'
 import Navbar from '../components/navbar'
 import Highlight from '../components/highlight'
 import Point from '../components/point'
@@ -14,32 +13,25 @@ import Check from '../components/check'
 import Quote from '../components/quote'
 import Footer from '../components/footer'
 import './home.css'
+import { Scrollchor } from 'react-scrollchor'
 
 const Home = (props) => {
   return (
     <div className="home-container">
       <Helmet>
-        <title>Finbest</title>
+        <title>DysamFin</title>
         <meta name="description" content="Description of the website" />
         <meta property="og:title" content="Finbest" />
         <meta property="og:description" content="Description of the website" />
       </Helmet>
       <div className="home-header">
         <div className="home-heading">
-          <div id="notifcation" className="home-notification">
-            <Link to="/">
-              <Announcement
-                rootClassName="announcement-root-class-name"
-                className="home-component"
-              ></Announcement>
-            </Link>
-          </div>
           <Navbar></Navbar>
         </div>
-        <div className="home-hero">
+        <div className="home-hero" id='Home'>
           <div className="home-content">
             <h1 className="home-title">
-              finbest is a clean, easy to use, finance app.
+              dysamFin es sencilla y fácil de usar
             </h1>
             <span className="home-caption">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -52,7 +44,7 @@ const Home = (props) => {
                   src="/playground_assets/pastedimage-zmzg.svg"
                   className="home-apple"
                 />
-                <span className="home-caption1">Download for iOS</span>
+                <span className="home-caption1">Descargar para iOS</span>
               </div>
               <div className="home-android-btn">
                 <img
@@ -60,7 +52,7 @@ const Home = (props) => {
                   src="/playground_assets/pastedimage-ld65.svg"
                   className="home-android"
                 />
-                <span className="home-caption2">Download for Android</span>
+                <span className="home-caption2">Descargar para Android</span>
               </div>
             </div>
           </div>
@@ -99,11 +91,11 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-      <div className="home-video">
+      <div className="home-video" id='Video'>
         <div className="home-content01">
           <div className="home-header1">
             <h2 className="home-text">
-              Built specifically for people who want faster transactions
+              Diseñada para transacciones ágiles y rápidas
             </h2>
           </div>
           <div className="home-video-container">
@@ -131,7 +123,10 @@ const Home = (props) => {
                 </span>
               </div>
               <div className="home-explore">
-                <span className="home-text03">Explore pricing plans -&gt;</span>
+                <Scrollchor to='#Pricing'>
+                <span className="home-text03">Descubre nuestros planes -&gt;</span>
+
+                </Scrollchor>
               </div>
             </div>
           </div>
@@ -142,55 +137,35 @@ const Home = (props) => {
           <span className="home-caption3">200k</span>
           <span className="home-description">
             Lorem ipsum dolor sit ametconsectetur adipiscing
-            <span
-              dangerouslySetInnerHTML={{
-                __html: ' ',
-              }}
-            />
           </span>
         </div>
         <div className="home-stat1">
-          <span className="home-caption4">$3,5 billions</span>
+          <span className="home-caption4">$3,5 mil millones</span>
           <span className="home-description1">
             Lorem ipsum dolor sit ametconsectetur adipiscing
-            <span
-              dangerouslySetInnerHTML={{
-                __html: ' ',
-              }}
-            />
           </span>
         </div>
         <div className="home-stat2">
           <span className="home-caption5">10.000 +</span>
           <span className="home-description2">
             Lorem ipsum dolor sit ametconsectetur adipiscing
-            <span
-              dangerouslySetInnerHTML={{
-                __html: ' ',
-              }}
-            />
           </span>
         </div>
       </div>
-      <div className="home-sections">
+      <div className="home-sections" id='Sections'>
         <div className="home-section">
           <div className="home-image">
             <div className="home-image-highlight">
               <span className="home-text04">
                 <span>
-                  always know your in and out
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
+                  mantenete al tanto de todo
                 </span>
                 <br></br>
               </span>
             </div>
           </div>
           <div className="home-content02">
-            <h2 className="home-text07">Everything you get with Finbest</h2>
+            <h2 className="home-text07">Todo lo que ofrece dysamFin</h2>
             <Highlight
               Title="Lorem ipsum dolor sit amet, consectetur "
               Description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud"
@@ -200,14 +175,16 @@ const Home = (props) => {
               Description="Sed do eiusmod tempor incididunt ut labore et dolore"
             ></Highlight>
             <div className="home-explore1">
+              <Scrollchor to='#Pricing'>
               <span>Explore pricing plans -&gt;</span>
+              </Scrollchor>
             </div>
           </div>
         </div>
         <div className="home-section1">
           <div className="home-content03">
             <div className="home-heading02">
-              <h2 className="home-text09">Keep track with all transactions</h2>
+              <h2 className="home-text09">Seguimiento de cada transacción</h2>
               <span className="home-text10">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt.
@@ -221,7 +198,7 @@ const Home = (props) => {
               </div>
               <Link to="/" className="home-navlink1">
                 <div className="home-get-started">
-                  <span className="home-sign-up">Get started now</span>
+                  <span className="home-sign-up">Empezá Ahora!</span>
                 </div>
               </Link>
             </div>
@@ -234,7 +211,7 @@ const Home = (props) => {
           </div>
           <div className="home-content05">
             <h2 className="home-text11">
-              <span>Create milestones</span>
+              <span>Create Metas</span>
               <br></br>
             </h2>
             <Accordion></Accordion>
@@ -245,10 +222,10 @@ const Home = (props) => {
         <div className="home-banner">
           <div className="home-overlay">
             <span className="home-text14">
-              Begin your financial journey on finbest
+              Iniciat een las finanzas con dysamFin
             </span>
             <div className="home-book-btn">
-              <span className="home-text15">Book a demo</span>
+              <span className="home-text15">Solicitá una demo</span>
             </div>
           </div>
           <img
@@ -258,13 +235,13 @@ const Home = (props) => {
           />
         </div>
       </div>
-      <div className="home-features">
+      <div className="home-features" id='Features'>
         <div className="home-header2">
           <div className="home-tag">
-            <span className="home-text16">Features</span>
+            <span className="home-text16">Características</span>
           </div>
           <div className="home-heading03">
-            <h2 className="home-text17">Everything you get with Finbest</h2>
+            <h2 className="home-text17">Todo lo que obtenés con dysamFin</h2>
             <span className="home-text18">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt.
@@ -274,43 +251,43 @@ const Home = (props) => {
         <div className="home-feature-list">
           <Feature></Feature>
           <Feature
-            Title="Multiple Devices"
+            Title="Dispositivos Múltiples"
             Thumbnail="/playground_assets/vector6113-r6dl.svg"
           ></Feature>
           <Feature
-            Title="Analytics"
+            Title="Analíticas"
             Thumbnail="/playground_assets/vector6113-6zj.svg"
           ></Feature>
           <Feature
-            Title="Virtual Card"
+            Title="Tarjeta Virtual"
             Thumbnail="/playground_assets/vector6113-lvvs.svg"
           ></Feature>
           <Feature
-            Title="Safe Transactions"
+            Title="Transacciones Seguras"
             Thumbnail="/playground_assets/vector6114-cupp.svg"
           ></Feature>
           <Feature
-            Title="Milestones"
+            Title="Metas Personales"
             Thumbnail="/playground_assets/vector6114-6m1e.svg"
           ></Feature>
           <Feature
-            Title="Trade"
+            Title="Operá"
             Thumbnail="/playground_assets/vector6114-yjl.svg"
           ></Feature>
           <Feature
-            Title="Wallet"
+            Title="Billetera"
             Thumbnail="/playground_assets/vector6113-lvvs.svg"
           ></Feature>
         </div>
       </div>
-      <div className="home-pricing">
+      <div className="home-pricing" id='Pricing'>
         <div className="home-content06">
           <div className="home-header3">
             <div className="home-tag1">
-              <span className="home-text19">Pricing plans</span>
+              <span className="home-text19">Nuestros Planes</span>
             </div>
             <div className="home-heading04">
-              <h2 className="home-text20">No setup cost or hidden fees.</h2>
+              <h2 className="home-text20">Precios finales</h2>
             </div>
           </div>
           <div className="home-pricing-plans">
@@ -318,13 +295,13 @@ const Home = (props) => {
               <div className="home-plan">
                 <div className="home-top">
                   <div className="home-heading05">
-                    <span className="home-text21">Standard</span>
+                    <span className="home-text21">Básico</span>
                     <span className="home-text22">
                       Sed ut perspiciatis unde omnis iste natus error sit.
                     </span>
                   </div>
                   <div className="home-cost">
-                    <span className="home-text23">Free</span>
+                    <span className="home-text23">Gratis</span>
                   </div>
                 </div>
                 <div className="home-bottom">
@@ -336,7 +313,7 @@ const Home = (props) => {
                     <Check Feature="Corporis suscipit laboriosam"></Check>
                   </div>
                   <div className="home-button">
-                    <span className="home-text24">Get Standard</span>
+                    <span className="home-text24">Get</span>
                   </div>
                 </div>
               </div>
@@ -350,7 +327,7 @@ const Home = (props) => {
                   </div>
                   <div className="home-cost1">
                     <span className="home-text27">$8</span>
-                    <span className="home-text28">/month</span>
+                    <span className="home-text28">/mes</span>
                   </div>
                 </div>
                 <div className="home-bottom1">
@@ -362,7 +339,7 @@ const Home = (props) => {
                     <Check Feature="Corporis suscipit laboriosam"></Check>
                   </div>
                   <div className="home-button1">
-                    <span className="home-text29">Get Standard</span>
+                    <span className="home-text29">Get</span>
                   </div>
                 </div>
               </div>
@@ -376,7 +353,7 @@ const Home = (props) => {
                   </div>
                   <div className="home-cost2">
                     <span className="home-text32">$16</span>
-                    <span className="home-text33">/month</span>
+                    <span className="home-text33">/mes</span>
                   </div>
                 </div>
                 <div className="home-bottom2">
@@ -388,7 +365,7 @@ const Home = (props) => {
                     <Check Feature="Corporis suscipit laboriosam"></Check>
                   </div>
                   <div className="home-button2">
-                    <span className="home-text34">Get Standard</span>
+                    <span className="home-text34">Get</span>
                   </div>
                 </div>
               </div>
@@ -397,7 +374,7 @@ const Home = (props) => {
               <div className="home-overlay1">
                 <div className="home-header4">
                   <div className="home-heading08">
-                    <span className="home-text35">Expand</span>
+                    <span className="home-text35">Personalizado</span>
                     <span className="home-text36">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt.
@@ -432,7 +409,7 @@ const Home = (props) => {
                 </div>
                 <div className="home-button3">
                   <span className="home-text40">
-                    <span>Contact us</span>
+                    <span>Contactanos</span>
                     <br></br>
                   </span>
                 </div>
@@ -443,13 +420,13 @@ const Home = (props) => {
             <div className="home-plan3">
               <div className="home-top3">
                 <div className="home-heading09">
-                  <span className="home-text43">Standard</span>
+                  <span className="home-text43">Básico</span>
                   <span className="home-text44">
                     Sed ut perspiciatis unde omnis iste natus error sit.
                   </span>
                 </div>
                 <div className="home-cost3">
-                  <span className="home-text45">Free</span>
+                  <span className="home-text45">Gratis</span>
                 </div>
               </div>
               <div className="home-bottom3">
@@ -461,7 +438,7 @@ const Home = (props) => {
                   <Check Feature="Corporis suscipit laboriosam"></Check>
                 </div>
                 <div className="home-button4">
-                  <span className="home-text46">Get Standard</span>
+                  <span className="home-text46">Get</span>
                 </div>
               </div>
             </div>
@@ -475,7 +452,7 @@ const Home = (props) => {
                 </div>
                 <div className="home-cost4">
                   <span className="home-text49">$8</span>
-                  <span className="home-text50">/month</span>
+                  <span className="home-text50">/mes</span>
                 </div>
               </div>
               <div className="home-bottom4">
@@ -487,7 +464,7 @@ const Home = (props) => {
                   <Check Feature="Corporis suscipit laboriosam"></Check>
                 </div>
                 <div className="home-button5">
-                  <span className="home-text51">Get Plus</span>
+                  <span className="home-text51">Get</span>
                 </div>
               </div>
             </div>
@@ -501,7 +478,7 @@ const Home = (props) => {
                 </div>
                 <div className="home-cost5">
                   <span className="home-text54">$16</span>
-                  <span className="home-text55">/month</span>
+                  <span className="home-text55">/mes</span>
                 </div>
               </div>
               <div className="home-bottom5">
@@ -513,7 +490,7 @@ const Home = (props) => {
                   <Check Feature="Corporis suscipit laboriosam"></Check>
                 </div>
                 <div className="home-button6">
-                  <span className="home-text56">Get Plus</span>
+                  <span className="home-text56">Get</span>
                 </div>
               </div>
             </div>
@@ -521,7 +498,7 @@ const Home = (props) => {
               <div className="home-overlay2">
                 <div className="home-header5">
                   <div className="home-heading12">
-                    <span className="home-text57">Expand</span>
+                    <span className="home-text57">Personalizado</span>
                     <span className="home-text58">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt.
@@ -556,7 +533,7 @@ const Home = (props) => {
                 </div>
                 <div className="home-button7">
                   <span className="home-text62">
-                    <span>Contact us</span>
+                    <span>Contactanos</span>
                     <br></br>
                   </span>
                 </div>
@@ -565,10 +542,10 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-help">
-          <span className="home-text65">Need any help?</span>
+          <span className="home-text65">Necesitas ayuda?</span>
           <div className="home-explore2">
             <span className="home-text66">
-              Get in touch with us right away -&gt;
+              Contactanos YA -&gt;
             </span>
           </div>
         </div>
@@ -588,7 +565,7 @@ const Home = (props) => {
             </div>
             <div className="quote">
               <Quote
-                Quote='"Testing these templates is a pleasure."'
+                Quote='"Increibles diseños."'
                 Title="Developer @ Vista La Vista"
                 Author="Author 2"
                 rootClassName="quote-root-class-name"
@@ -596,7 +573,7 @@ const Home = (props) => {
             </div>
             <div className="quote">
               <Quote
-                Quote='"Wow, awesome works!'
+                Quote='"Funciona Fenomenal!'
                 Title="Designer @ OhBoy"
                 rootClassName="quote-root-class-name"
               ></Quote>
@@ -649,7 +626,7 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-      <div className="home-faq">
+      <div className="home-faq" id='Faq'>
         <div className="home-content08">
           <div className="home-header6">
             <div className="home-tag2">
@@ -659,14 +636,14 @@ const Home = (props) => {
               </span>
             </div>
             <div className="home-heading13">
-              <h2 className="home-text70">Frequently Asked Questions</h2>
+              <h2 className="home-text70">Preguntas Frecuentes</h2>
             </div>
           </div>
           <div className="home-rows">
             <div className="home-column3">
               <div className="Question">
                 <span className="home-title1">
-                  What is sit amet, consectetur adipiscing elit, sed do?
+                  Consectetur adipiscing elit, sed do?
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -678,21 +655,11 @@ const Home = (props) => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa
                   qui officia deserunt mollit anim id est laborum.
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
                 </span>
               </div>
               <div className="Question">
                 <span className="home-title2">
-                  What is sit amet, consectetur adipiscing elit, sed do?
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
+                Consectetur adipiscing elit, sed do?
                 </span>
                 <span className="home-description4">
                   <span>
@@ -700,32 +667,17 @@ const Home = (props) => {
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Excepteur sint occaecat cupidatat non proident, sunt
                     in culpa qui officia deserunt mollit anim id est laborum.
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
                   </span>
                   <br></br>
                   <span>
                     tempor incididunt ut labore et dolore magna aliqua.
                     Excepteur sint occaecat
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
                   </span>
                 </span>
               </div>
               <div className="home-question2 Question">
                 <span className="home-title3">
-                  What is sit amet, consectetur adipiscing elit, sed do?
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
+                Consectetur adipiscing elit, sed do?
                 </span>
                 <span className="home-description5">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -736,12 +688,7 @@ const Home = (props) => {
             <div className="home-column4">
               <div className="home-question3 Question">
                 <span className="home-title4">
-                  What is sit amet, consectetur adipiscing elit, sed do?
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
+                Consectetur adipiscing elit, sed do?
                 </span>
                 <span className="home-description6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -750,12 +697,7 @@ const Home = (props) => {
               </div>
               <div className="home-question4 Question">
                 <span className="home-title5">
-                  What is sit amet, consectetur adipiscing elit, sed do?
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
+                Consectetur adipiscing elit, sed do?
                 </span>
                 <span className="home-description7">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -764,12 +706,7 @@ const Home = (props) => {
               </div>
               <div className="home-question5 Question">
                 <span className="home-title6">
-                  What is sit amet, consectetur adipiscing elit, sed do?
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
+                Consectetur adipiscing elit, sed do?
                 </span>
                 <span className="home-description8">
                   <span>
@@ -777,21 +714,11 @@ const Home = (props) => {
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Excepteur sint occaecat cupidatat non proident, sunt
                     in culpa qui officia deserunt mollit anim id est laborum.
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
                   </span>
                   <br></br>
                   <span>
                     tempor incididunt ut labore et dolore magna aliqua.
                     Excepteur sint occaecat
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
                   </span>
                 </span>
               </div>
@@ -799,10 +726,10 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-      <div className="home-get-started1">
+      <div className="home-get-started1" id='Download'>
         <div className="home-content09">
           <div className="home-heading14">
-            <h2 className="home-text77">Get started with finbest now!</h2>
+            <h2 className="home-text77">Empezá a operar con nostros!</h2>
             <span className="home-text78">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore magna.
@@ -815,7 +742,7 @@ const Home = (props) => {
                 src="/playground_assets/pastedimage-zmzg.svg"
                 className="home-apple1"
               />
-              <span className="home-caption6">Download for iOS</span>
+              <span className="home-caption6">Descargar para iOS</span>
             </div>
             <div className="home-android-btn1">
               <img
@@ -823,7 +750,7 @@ const Home = (props) => {
                 src="/playground_assets/pastedimage-ld65.svg"
                 className="home-android1"
               />
-              <span className="home-caption7">Download for Android</span>
+              <span className="home-caption7">Descargar para Android</span>
             </div>
           </div>
         </div>
