@@ -409,7 +409,7 @@
   flex-direction: row;
   background-size: contain;
   justify-content: flex-end;
-  background-image: url("/playground_assets/group%201277.svg");
+  background-image: url("/playground_assets/group%201277.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -552,7 +552,7 @@
   flex-direction: row;
   background-size: cover;
   justify-content: flex-end;
-  background-image: url("/playground_assets/group%201309.svg");
+  background-image: url("/playground_assets/group%201309.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -576,7 +576,7 @@
   flex-direction: row;
   background-size: cover;
   justify-content: center;
-  background-image: url("/playground_assets/group%201281.svg");
+  background-image: url("/playground_assets/group%201281.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -642,7 +642,7 @@
   padding-bottom: var(--dl-space-space-fiveunits);
   background-size: cover;
   justify-content: center;
-  background-image: url("/playground_assets/mask%20group.svg");
+  /* background-image: url("/playground_assets/mask%20group.png"); */
 }
 .home-text14 {
   color: rgb(193, 255, 252);
@@ -2348,11 +2348,12 @@
     gap: var(--dl-space-space-twounits);
   }
   .home-banner {
-    height: 520px;
+    height: fit-content;
     position: relative;
   }
   .home-overlay {
-    gap: var(--dl-space-space-oneandhalfunits);
+    width: 100% !important;
+    height: fit-content !important;
     flex: 1;
     z-index: 50;
     padding-top: var(--dl-space-space-threeunits);
@@ -2362,6 +2363,7 @@
     padding-bottom: var(--dl-space-space-threeunits);
     justify-content: flex-start;
     background-image: none;
+    align-items: center;
   }
   .home-text14 {
     font-size: 32px;

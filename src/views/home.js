@@ -72,14 +72,14 @@ const Home = (props) => {
               />
               <img
                 alt="pastedImage"
-                src="/playground_assets/pastedimage-c39.svg"
+                src="/playground_assets/pastedimage-c39.png"
                 className="home-pasted-image2"
               />
             </div>
             <div className="home-column2">
               <img
                 alt="pastedImage"
-                src="/playground_assets/pastedimage-iqnj.svg"
+                src="/playground_assets/pastedimage-iqnj.png"
                 className="home-pasted-image3"
               />
               <img
@@ -222,17 +222,12 @@ const Home = (props) => {
         <div className="home-banner">
           <div className="home-overlay">
             <span className="home-text14">
-              Iniciat een las finanzas con dysamFin
+              Iniciate en las finanzas con dysamFin
             </span>
             <div className="home-book-btn">
               <span className="home-text15">Solicitá una demo</span>
             </div>
           </div>
-          <img
-            alt="pastedImage"
-            src="/playground_assets/pastedimage-ylke.svg"
-            className="home-pasted-image5"
-          />
         </div>
       </div>
       <div className="home-features" id='Features'>
@@ -644,11 +639,6 @@ const Home = (props) => {
               <div className="Question">
                 <span className="home-title1">
                   Consectetur adipiscing elit, sed do?
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
                 </span>
                 <span className="home-description3">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
